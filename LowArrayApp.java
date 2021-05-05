@@ -26,6 +26,7 @@ class ArrayAp {
 		
 		for (j = 0; j < nElems; j++) // output elements
 			System.out.println(arr.getElement(j) + " ");
+			
 		System.out.println("");
 		
 		// ------------------------------------------
