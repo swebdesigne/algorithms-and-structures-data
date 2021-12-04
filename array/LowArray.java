@@ -1,3 +1,5 @@
+package array;
+
 class LowArray {
 	private long[] a; // link to array
 	

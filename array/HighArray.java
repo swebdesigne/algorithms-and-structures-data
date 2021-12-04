@@ -1,3 +1,5 @@
+package array;
+
 public class HighArray {
 	private long[] a; // reference to array
 	private int nElems; // the quantity the elements at array
