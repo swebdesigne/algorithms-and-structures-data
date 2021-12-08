@@ -1,4 +1,4 @@
-package greedy;
+package algorithm.greedy;
 
 import org.junit.Test;
 
