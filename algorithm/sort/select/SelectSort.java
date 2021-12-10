@@ -1,4 +1,4 @@
-package algorithm.bubble.select;
+package algorithm.sort.select;
 
 import java.util.Arrays;
 import java.util.Comparator;
