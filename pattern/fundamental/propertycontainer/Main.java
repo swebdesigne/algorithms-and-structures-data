@@ -1,4 +1,4 @@
-package pattern.behave.propertycontainer;
+package pattern.fundamental.propertycontainer;
 
 public class Main {
     public static void main(String[] args) {

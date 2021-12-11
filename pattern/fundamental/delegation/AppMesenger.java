@@ -1,4 +1,4 @@
-package pattern.delegation;
+package pattern.fundamental.delegation;
 
 public class AppMesenger<T> implements MessengerInterface<T> {
     private MessengerInterface mesenger;

@@ -1,4 +1,4 @@
-package pattern.delegation;
+package pattern.fundamental.delegation;
 
 interface MessengerInterface<T> {
     MessengerInterface setSender(T value);

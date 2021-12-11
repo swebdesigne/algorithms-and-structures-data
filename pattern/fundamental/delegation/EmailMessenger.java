@@ -1,4 +1,4 @@
-package pattern.delegation;
+package pattern.fundamental.delegation;
 
 public class EmailMessenger<T> extends AbstractMessenger<T> {
     public boolean send() {

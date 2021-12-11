@@ -1,4 +1,4 @@
-package pattern.behave.propertycontainer;
+package pattern.fundamental.propertycontainer;
 
 public class BlogPost extends PropertyContainer {
     private String title;

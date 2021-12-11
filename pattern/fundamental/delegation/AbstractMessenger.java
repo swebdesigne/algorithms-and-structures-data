@@ -1,4 +1,4 @@
-package pattern.delegation;
+package pattern.fundamental.delegation;
 
 abstract class AbstractMessenger<T> implements  MessengerInterface<T> {
     protected T sender;

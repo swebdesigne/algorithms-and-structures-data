@@ -1,4 +1,4 @@
-package pattern.behave.propertycontainer;
+package pattern.fundamental.propertycontainer;
 
 public interface PropertyContainerInterface<T> {
         void addProperty(String propertyName, T value);

@@ -1,4 +1,4 @@
-package pattern.delegation;
+package pattern.fundamental.delegation;
 
 public class Delegation {
     public static void main(String[] args) {

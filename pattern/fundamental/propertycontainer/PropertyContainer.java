@@ -1,4 +1,4 @@
-package pattern.behave.propertycontainer;
+package pattern.fundamental.propertycontainer;
 
 import java.util.HashMap;
 import java.util.Map;
