@@ -1,6 +1,6 @@
 package pattern.fundamental.delegation;
 
-public class SmsMesenger extends AbstractMessenger {
+public class SmsMessenger extends AbstractMessenger {
     public boolean send() {
         System.out.println("Send by " + super.sender);
         System.out.println("Send by " + super.recipient);

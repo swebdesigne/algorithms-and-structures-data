@@ -1,9 +1,9 @@
 package pattern.fundamental.delegation;
 
-public class AppMesenger<T> implements MessengerInterface<T> {
+public class AppMessenger<T> implements MessengerInterface<T> {
     private MessengerInterface mesenger;
 
-    public AppMesenger() {
+    public AppMessenger() {
         mesenger = new EmailMessenger();
     }
 
@@ -17,7 +17,7 @@ public class AppMesenger<T> implements MessengerInterface<T> {
     }
 
     public MessengerInterface toSms() {
-        mesenger = new SmsMesenger();
+        mesenger = new SmsMessenger();
         return this;
     }
 

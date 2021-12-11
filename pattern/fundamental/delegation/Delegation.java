@@ -3,8 +3,8 @@ package pattern.fundamental.delegation;
 public class Delegation {
     public static void main(String[] args) {
         String name = "Делегирование (Delegation)";
-        String description = AppMesenger.description();
-        AppMesenger item = new AppMesenger();
+        String description = AppMessenger.description();
+        AppMessenger item = new AppMessenger();
 
         System.out.println(name);
         System.out.println(description + "\n");
