@@ -36,7 +36,8 @@ public class BracketChecker {
                 default:
                     break;
             }
-        }        if (!theStack.isEmpty()) {
+        }
+        if (!theStack.isEmpty()) {
             System.out.println("Error: missing right delimiter");
         }
     }
