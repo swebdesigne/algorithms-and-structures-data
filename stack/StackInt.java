@@ -1,25 +1,25 @@
 package stack;
 
-public class StackX {
+public class StackInt {
     private int maxSize;
     private int top;
-    private long[] stackArray;
+    private int[] stackArray;
 
-    public StackX(int maxSize) {
+    public StackInt(int maxSize) {
         this.maxSize = maxSize;
         this.top = -1;
-        this.stackArray = new long[maxSize];
+        this.stackArray = new int[maxSize];
     }
 
-    public void push(long value) {
+    public void push(int value) {
         stackArray[++top] = value;
     }
 
-    public long pop() {
+    public int pop() {
         return stackArray[top--];
     }
 
-    public long peek() {
+    public int peek() {
         return stackArray[top];
     }
 
@@ -31,7 +31,7 @@ public class StackX {
         return top + 1;
     }
 
-    public long peekN(int n) {
+    public int peekN(int n) {
         return stackArray[n];
     }
 
@@ -44,8 +44,9 @@ public class StackX {
         }
         System.out.println("");
     }
-    
+
     public boolean isFull() {
         return (top == maxSize - 1);
     }
 }
+
