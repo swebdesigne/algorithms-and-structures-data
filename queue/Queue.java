@@ -1,5 +1,7 @@
 package queue;
 
+import java.math.BigInteger;
+
 /**
  * Реализация очереди со счетчиками элементов
 */
