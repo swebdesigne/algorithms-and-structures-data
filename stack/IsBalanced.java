@@ -8,7 +8,7 @@ public class IsBalanced {
     }
     public static boolean isBalanced(String str) {
         Stack<Character> stack = new Stack<>();
-        for (int i = 0; i < str.length(); ++i) {
+        for (int i = 0; i < str.length(); i++) {
             if (isOpen(str.charAt(i))) stack.push(str.charAt(i));
             else {
                 if (!stack.isEmpty() && isPair(stack.peek(), str.charAt(i))) stack.pop();
