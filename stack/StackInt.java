@@ -1,9 +1,9 @@
 package stack;
 
 public class StackInt {
-    private int maxSize;
+    private final int maxSize;
     private int top;
-    private int[] stackArray;
+    private final int[] stackArray;
 
     public StackInt(int maxSize) {
         this.maxSize = maxSize;

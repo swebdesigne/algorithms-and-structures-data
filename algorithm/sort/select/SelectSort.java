@@ -31,7 +31,7 @@ public class SelectSort implements Comparator<Integer> {
         for (out = 0; out < array.length - 1; out++) {
             min = out;
             for (in = out + 1; in < array.length; in++) {
-                if (compare(array[min], array[in]) == 1) {
+                if (compare(array[min], array[in]) > 0) {
                     min = in;
                 }
                 int tmp = array[out];

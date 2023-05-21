@@ -1,18 +1,17 @@
 package queue;
 
-import java.math.BigInteger;
-
 /**
+ * Очередь основана на массиве
  * Реализация очереди со счетчиками элементов
-*/
-public class Queue {
-    private int maxSize;
-    private long[] queArray;
+ */
+public class QueueArray {
+    private final int maxSize;
+    private final long[] queArray;
     private int front;
     private int rear;
     private int nItems;
 
-    public Queue(int maxSize) {
+    public QueueArray(int maxSize) {
         this.maxSize = maxSize;
         this.queArray = new long[maxSize];
         this.front = 0;
@@ -37,6 +36,19 @@ public class Queue {
         return tmp;
     }
 
+    public void display() {
+        int tmp = 0;
+        while (tmp < rear + 1) {
+            System.out.println(queArray[tmp]);
+            tmp++;
+        }
+    }
+    public void displayWithRemove() {
+        while (!isEmpty()) {
+            System.out.println(remove());
+        }
+    }
+
     public long peekFront() {
         return queArray[front];
     }
@@ -55,15 +67,16 @@ public class Queue {
 }
 
 /**
+ * Очередь основана на массиве
  * Реализация очереди без счетчика элементов
  */
-class Queue2 {
-    private int maxSize;
-    private long[] queArray;
+class QueueArray2 {
+    private final int maxSize;
+    private final long[] queArray;
     private int front;
     private int rear;
 
-    public Queue2(int maxSize) {
+    public QueueArray2(int maxSize) {
         this.maxSize = maxSize + 1;
         queArray = new long[maxSize];
         front = 0;
@@ -75,6 +88,12 @@ class Queue2 {
             rear = -1;
         }
         queArray[++rear] = j;
+    }
+
+    public void display() {
+        for (int i = 0; i < queArray.length - 1; i++) {
+            System.out.println(queArray[i]);
+        }
     }
 
     public long remove() {
@@ -108,23 +127,27 @@ class Queue2 {
 
 class QueueApp {
     public static void main(String[] args) {
-        Queue theQueue = new Queue(5);
-        theQueue.insert(10);
-        theQueue.insert(20);
-        theQueue.insert(30);
-        theQueue.insert(40);
+        QueueArray theQueueArray = new QueueArray(5);
+        theQueueArray.insert(10);
+        theQueueArray.insert(20);
+        theQueueArray.insert(30);
+        theQueueArray.insert(40);
 
-        theQueue.remove();
-        theQueue.remove();
-        theQueue.remove();
+        theQueueArray.displayWithRemove();
+        System.out.println(theQueueArray.isEmpty());
+        System.exit(0);
 
-        theQueue.insert(50);
-        theQueue.insert(60);
-        theQueue.insert(70);
-        theQueue.insert(80);
+        theQueueArray.remove();
+        theQueueArray.remove();
+        theQueueArray.remove();
 
-        while (!theQueue.isEmpty()) {
-            long n = theQueue.remove();
+        theQueueArray.insert(50);
+        theQueueArray.insert(60);
+        theQueueArray.insert(70);
+        theQueueArray.insert(80);
+
+        while (!theQueueArray.isEmpty()) {
+            long n = theQueueArray.remove();
             System.out.println(n);
             System.out.println(" ");
         }

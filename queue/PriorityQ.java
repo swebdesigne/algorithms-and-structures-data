@@ -1,8 +1,8 @@
 package queue;
 
 public class PriorityQ {
-    private int maxSize;
-    private long[] queArray;
+    private final int maxSize;
+    private final long[] queArray;
     private int nItems;
 
     public PriorityQ(int maxSize) {

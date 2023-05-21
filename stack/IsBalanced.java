@@ -6,7 +6,8 @@ public class IsBalanced {
     public static boolean isOpen(char c) {
         return c == '{' || c == '[' || c == '(';
     }
-    public static boolean isBalanced(String str) {
+
+        public static boolean isBalanced(String str) {
         Stack<Character> stack = new Stack<>();
         for (int i = 0; i < str.length(); i++) {
             if (isOpen(str.charAt(i))) stack.push(str.charAt(i));

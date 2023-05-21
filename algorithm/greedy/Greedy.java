@@ -2,15 +2,18 @@ package algorithm.greedy;
 
 import java.util.Arrays;
 
+/**
+ * The class describe a greedy algorithm
+ */
 public class Greedy {
     public int[] execute(int[] coins, int money, int price) {
         int size = 0;
         int[] rsl = new int[100];
         int remainder = money - price;
-        for (int i = 0; i < coins.length; i++) {
-            while (remainder >= coins[i]) {
-                remainder -= coins[i];
-                rsl[size] = coins[i];
+        for (int coin : coins) {
+            while (remainder >= coin) {
+                remainder -= coin;
+                rsl[size] = coin;
                 size++;
             }
         }

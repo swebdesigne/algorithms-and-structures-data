@@ -20,7 +20,7 @@ public class BubbleSort implements Comparator<Integer> {
      *
      * Инвариант:
      *
-     * Элементы данных от справа от out отсортированы
+     * Элементы данных справа от out отсортированы
      *
      * Сложность - O(n*2)
      *
@@ -29,9 +29,9 @@ public class BubbleSort implements Comparator<Integer> {
      */
     private <T> void sort(T[] array) {
         int in, out;
-        for (out = array.length - 1; out > 0; out--) {
+        for (out = array.length - 1; out > 1; out--) {
             for (in = 0; in < out; in++) {
-                if (compare((Integer) array[in], (Integer) array[in + 1]) == 1) {
+                if (compare((Integer) array[in], (Integer) array[in + 1]) > 0) {
                     T tmp = array[in];
                     array[in] = array[in + 1];
                     array[in + 1] = tmp;
@@ -41,28 +41,9 @@ public class BubbleSort implements Comparator<Integer> {
         Arrays.stream(array).forEach(System.out::println);
     }
 
-    public  <T> void sortExtraExercise(T[] arr) {
-        int out, in;
-        for (out = arr.length - 1; out > 0; out--) {
-            for (in = 0; in < out; in++) {
-                if (compare((Integer) arr[in], (Integer) arr[in + 1]) == 1) {
-                    T tmp = arr[in];
-                    arr[in] = arr[in + 1];
-                    arr[in + 1] = tmp;
-                }
-                if (compare((Integer) arr[out], (Integer) arr[out - 1]) == -1) {
-                    T tmp = arr[out];
-                    arr[out] = arr[out - 1];
-                    arr[out - 1] = tmp;
-                }
-            }
-        }
-        Arrays.stream(arr).forEach(System.out::println);
-    }
-
     public Integer[] sortReturnArr(Integer[] array) {
         int in, out;
-        for (out = array.length - 1; out > 0; out--) {
+        for (out = array.length - 1; out > 1; out--) {
             for (in = 0; in < out; in++) {
                 if (compare(array[in], array[in + 1]) == 1) {
                     Integer tmp = array[in];
